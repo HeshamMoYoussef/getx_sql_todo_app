@@ -9,9 +9,7 @@ class HomeScreen extends GetView<SqlController> {
 
   @override
   Widget build(BuildContext context) {
-    // Get.put(SqlController());
     Get.find<SqlController>();
-    // Get.lazyPut(() => SqlController(), fenix: true);
     return Scaffold(
       appBar: AppBar(title: Text('ToDo App'), centerTitle: true),
       floatingActionButton: FloatingActionButton(
@@ -28,7 +26,6 @@ class HomeScreen extends GetView<SqlController> {
         child: const Icon(Icons.add),
       ),
       body: GetBuilder<SqlController>(
-        // init: SqlController(),
         builder:
             (controller) =>
                 controller.list.isEmpty

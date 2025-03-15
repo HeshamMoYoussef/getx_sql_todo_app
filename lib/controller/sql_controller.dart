@@ -19,7 +19,6 @@ class SqlController extends GetxController {
     // Get a location using getDatabasesPath
     var databasesPath = await getDatabasesPath();
     String path = join(databasesPath, 'todo.db');
-
     openAppDataBase(path: path);
   }
 
@@ -104,7 +103,6 @@ class SqlController extends GetxController {
 
   // update data
   bool isUpdateTask = false;
-  // int? id;
 
   void updateDataBase({
     required int id,
